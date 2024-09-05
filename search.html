@@ -1,0 +1,35 @@
+<input type="text" onkeyup="check(event)"><!-- when we type input show -->
+<div>
+    <h1>One</h1>
+    <h1>two</h1>
+
+    <h1>three</h1>
+    <h1>for</h1>
+    <h1>fove</h1>
+
+</div>
+
+
+<script>
+    var entext=""
+    var container=document.querySelector("div")
+
+    var ele=container.querySelectorAll("h1")//to selelct all h1
+
+
+    function check(event){
+     entext= event.target.value.toUpperCase()
+   for(i=0 ;i< ele.length;i++){
+    if(ele[i].textContent.toUpperCase().indexOf(entext)<0)//one.index(o)<0 =>  value iruku
+     {
+        ele[i].style.display="none"
+     }
+     else{
+        ele[i].style.display="block"
+        ele[i].style.color="red"
+
+
+     }
+   }
+    }
+</script>
